@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandarin Collection | Agridera</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo&display=swap">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+<body>
+
+<header class="header-white">
+    <div class="wrapper">
+        <div class="row">
+            <div id="logo">
+                <a href="index.html"><img src="img/Logo.png" alt="Agridera Logo"></a>
+            </div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Company Profile</a></li>
+                    <li><a href="all-mandarins.html">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">R & D</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div id="search">
+                <div id="search-in" class="flex">
+                    <input type="search" placeholder="Search">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="content-banner">
+        <div id="slider-tomato" class="shadow">
+            <div class="slider-meadow_text wrapper">
+                <h1>Organic Mandarin<br>Collection</h1>
+                <p class="vertical-line">Relentless research and innovation in citrus seeds...</p>
+                <p>At Agridera, we prioritise disease resistance<br>and organic quality.</p>
+                <a href="#" class="basket shadow_read">ORDER NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg1">
+        <div class="wrapper">
+            
+            <article class="strategy-box-flat">
+                <div class="strategy-flat-content">
+                    <h3>Our Mandarin Cultivation Strategy</h3>
+                    <div class="divider"></div>
+                    <p>
+                        At Agridera, our greenhouse-focused breeding program targets the discerning markets of <b>Spain and Turkey</b>. We prioritize the production of both single and cluster pick varieties, boasting round fruit shapes and fortified against a spectrum of threats including Tomato Yellow Leaf Curl Virus (TYLCV), Tomato Spotted Wilt Virus (TSWV), nematodes, and Fusarium oxysporum f.sp. radicis-lycopersici (FORL). We are constantly tailored for the vibrant markets of <b>Brazil, Morocco, and Turkey</b>. In our continuous pursuit of excellence, future iterations will also integrate resistance against Fusarium oxysporum f.sp. lycopersici (F3) as a foundational trait in our cultivars. We craft varieties in both round and elongated shapes, available in standard sizes ranging from 140 to 180 grams, as well as beefier sizes exceeding 180 grams, up to 300 grams and beyond. These hybrids are fortified with core resistances, ensuring a long-lasting organic quality for our partners.
+                    </p>
+                </div>
+            </article>
+
+            <div class="tomatoes" id="mandarin-app">
+                <div class="wrapper-tomato">
+                    <div class="tomato" v-for="item in products" :key="item.id">
+                        <a :href="'product.html#' + item.id" class="link">
+                            <img :src="item.image" :alt="item.title">
+                            <p><b>{{ item.title }}</b> <br> {{ item.short_text }}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer_container">
+            <nav class="footer_menu">
+                <a href="#">PROFILE</a>
+                <a href="#">MANAGEMENT</a>
+                <a href="#">PRODUCTS</a>
+                <a href="#">R&D</a>
+                <a href="#">LINKS</a>
+                <a href="#">SITEMAP</a>
+                <a href="#">CONTACT</a>
+            </nav>
+
+            <div class="footer_copyright">
+                <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+            </div>
+
+            <div class="social_icons">
+                <a href="#"><img src="img/Ico_in.png" alt="LinkedIn"></a>
+                <a href="#"><img src="img/Ico_inst.png" alt="Instagram"></a>
+                <a href="#"><img src="img/Ico_tube.png" alt="YouTube"></a>
+                <a href="#"><img src="img/Ico_tw.png" alt="Twitter"></a>
+                <a href="#"><img src="img/Ico_fb.png" alt="Facebook"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    new Vue({
+        el: '#mandarin-app',
+        data: {
+            products: [
+                { id: 1, title: 'Clementines', short_text: 'Sweet citrus', image: 'img/Clementines.jpg' },
+                { id: 2, title: 'Minneola', short_text: 'Juicy Tangelo', image: 'img/Minneola.jpg' },
+                { id: 3, title: 'Murcott', short_text: 'Honey flavor', image: 'img/Murcott.jpg' },
+                { id: 4, title: 'Satsuma', short_text: 'Easy to peel', image: 'img/Satsuma.jpg' },
+                { id: 5, title: 'Tangerine', short_text: 'Classic citrus', image: 'img/Tangerine.jpg' }
+            ]
+        }
+    });
+</script>
+
+</body>
+</html>
