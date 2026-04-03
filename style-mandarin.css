@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    background-color: #f7f4f0;
+}
+
+.wrapper { 
+    max-width: 1127px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Header */
+.header-white {
+    padding: 15px 0;
+    background-color: #d9fcc0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-white .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img {
+    max-height: 70px;
+    display: block;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+#menu ul li a {
+    color: #324950;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#menu ul li a:hover {
+    color: #57984C;
+}
+
+#search {
+    border-bottom: 1px solid #324950;
+    display: flex;
+    align-items: center;
+    background: url('search.png') no-repeat left center;
+    background-size: 18px;
+    padding-left: 25px;
+}
+
+#search input {
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 29px;
+    color: #324950;
+}
+
+#search button {
+    display: none;
+}
+
+/* Banner Section */
+.content-banner {
+    margin: 0;
+    padding: 0;
+}
+
+#slider-tomato {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: url('bd.jpg') no-repeat center bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.slider-meadow_text {
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.slider-meadow_text h1 {
+    font-size: 54px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.vertical-line {
+    border-left: 5px solid #57984C;
+    padding-left: 15px;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.basket {
+    display: inline-block;
+    background-color: #57984C;
+    color: #ffffff;
+    padding: 12px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.basket:hover {
+    background-color: #467a3d;
+}
+
+/* Main Content */
+.bg1 {
+    background: linear-gradient(to bottom, #d9fcc0, #fbfcc0, #fcc0c0);
+    padding-top: 1px;
+    padding-bottom: 50px;
+}
+
+.strategy-box-flat {
+    background-color: #f7fcf3;
+    border: 1px solid #c8d6b9;
+    border-radius: 40px;
+    padding: 30px 50px;
+    margin: 40px auto;
+    max-width: 1100px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+.strategy-flat-content {
+    text-align: center;
+}
+
+.strategy-flat-content h3 {
+    color: #324950;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 80%;
+    height: 1px;
+    background-color: #c8d6b9;
+    margin: 0 auto 30px;
+}
+
+.strategy-flat-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4a5a5e;
+    margin: 0;
+    text-align: justify;
+}
+
+.strategy-flat-content b {
+    color: #57984C;
+}
+
+/* Product Grid */
+#mandarin-app {
+    padding-top: 20px;
+}
+
+.wrapper-tomato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.tomato {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.tomato:hover {
+    transform: translateY(-5px);
+}
+
+.tomato img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.tomato p {
+    text-align: center;
+    margin: 0;
+    padding: 20px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #324950;
+}
+
+.tomato b {
+    color: #57984C;
+}
+
+/* Footer */
+.footer {
+    background-color: #324950;
+    padding: 30px 0;
+    color: #ffffff;
+    font-family: 'Heebo', sans-serif;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_menu {
+    display: flex;
+    gap: 15px;
+}
+
+.footer_menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer_copyright {
+    text-align: center;
+    font-size: 13px;
+    color: #B9B9B9;
+}
+
+.social_icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social_icons img {
+    width: 24px;
+    height: 24px;
+    transition: 0.3s;
+}
+
+.social_icons img:hover {
+    transform: scale(1.1);
+}
