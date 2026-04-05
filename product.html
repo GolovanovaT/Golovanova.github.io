@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mandarin - Agridera</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="product-page-new">
+
+<div class="header-white shadow">
+    <div class="wrapper flex">
+        <div id="logo">
+            <img src="logo.png" alt="Agridera">
+        </div>
+
+        <div id="menu" class="align-right">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Company Profile</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">R & D</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="search">
+            <input type="text" placeholder="Search">
+            <button></button>
+        </div>
+    </div>
+</div>
+
+<div class="bg-tomato-one">
+    <div class="wrapper">
+        
+        <div class="return">
+            <p><a href="#">← Return to all mandarins</a></p>
+        </div>
+
+        <div class="product-flex-container">
+            
+            <div class="product-details">
+                <h1 class="product-title">Mandarin</h1>
+                <h2 class="product-subtitle">Clementines</h2>
+
+                <div class="yield-promo">
+                    <div class="red-circle-icon">
+                        <img src="Union1.png" alt="" style="width:40px;">
+                    </div>
+                    <span class="promo-text">Very high yield and excellent fruits quality!</span>
+                </div>
+
+                <div class="green-titles">
+                    <p>CHARACTERISTICS</p>
+                    <hr>
+                </div>
+
+                <div class="character-grid">
+                    <div class="char-col">
+                        <p class="char-label">Resistance</p>
+                        <ul class="ul-tomatoone">
+                            <li><span>HR: Citrus tristeza virus</span></li>
+                            <li><span>IR: Alternaria</span></li>
+                        </ul>
+
+                        <p class="char-label">Plant</p>
+                        <ul class="ul-tomatoone">
+                            <li><span>Strong and productive tree</span></li>
+                            <li><span>High and regular yields</span></li>
+                            <li><span>Mid-season maturity</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="char-col">
+                        <p class="char-label">Cycle</p>
+                        <ul class="ul-tomatoone">
+                            <li><span>Spring</span></li>
+                            <li><span>Summer</span></li>
+                        </ul>
+
+                        <p class="char-label">Color</p>
+                        <p class="text-orange">Bright Orange</p>
+                    </div>
+                </div>
+            </div>
+
+           <div class="product-image-side">
+    <img src="Clementines.jpg" alt="Clementines" class="main-prod-img">
+    
+<div class="btn-container-right">
+    <button class="btn-basket-custom btn-go-to-basket" onclick="addToCartAndGo(1)">
+        Go to basket
+    </button>
+</div>
+
+<script>
+function addToCartAndGo(productId) {
+    // отримуємо поточний кошик із localStorage
+    let cart = localStorage.getItem('cart');
+    if(cart) {
+        cart = cart.split(',');
+    } else {
+        cart = [];
+    }
+
+    // додаємо продукт тільки якщо його ще нема
+    if(!cart.includes(String(productId))) {
+        cart.push(productId);
+    }
+
+    // зберігаємо назад
+    localStorage.setItem('cart', cart.join(','));
+
+    // переходимо на сторінку contact us
+    window.location.href = 'contact us.html';
+}
+</script>
+ </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    © 2026 Agridera. All rights reserved.
+</div>
+
+</body>
+</html>
