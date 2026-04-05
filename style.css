@@ -7,7 +7,7 @@ background: url(bg.jpg) no-repeat center;
 background-size: cover;
 }
 .wrapper{ 
-max-width: 1127px;
+max-width: 1200px;
 width:100%;
 margin:0 auto;
 }
@@ -731,3 +731,253 @@ background-color: #f5f5f5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* ===== HEADER FIX ===== */
+
+.header-white {
+    background-color: #bfe3a8;
+    padding: 15px 0;
+}
+
+/* вирівнювання */
+.header-white .flex {
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* логотип */
+#logo img {
+    height: 60px;
+}
+
+/* меню */
+#menu ul {
+    display: flex;
+    gap: 30px;
+}
+
+#menu ul li {
+    margin: 0;
+}
+
+#menu ul li a {
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+
+/* underline ефект */
+#menu ul li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #324950;
+    transition: 0.3s;
+}
+
+#menu ul li a:hover::after {
+    width: 100%;
+}
+
+/* пошук */
+#search {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #324950;
+    max-width: 200px;
+}
+
+#search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 5px;
+}
+
+/* іконка */
+#search button {
+    background: url('search.png') no-repeat center;
+    background-size: 18px;
+    width: 20px;
+    height: 20px;
+}
+/* --- СТИЛІ ТІЛЬКИ ДЛЯ СТОРІНКИ ТОВАРУ --- */
+
+/* Контейнер для розділення тексту та фото */
+.product-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.product-details {
+    width: 55%;
+}
+
+.product-image-side {
+    width: 40%;
+    text-align: right;
+}
+
+.main-prod-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+}
+
+/* Заголовки */
+.product-title {
+    font-size: 54px !important;
+    color: #324950 !important;
+    margin: 0 !important;
+}
+
+.product-subtitle {
+    font-size: 54px !important;
+    color: #57984C !important;
+    margin: 0 0 30px 0 !important;
+}
+
+/* Промо-блок з іконкою */
+.yield-promo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.red-circle-icon {
+    background-color: #CF2333;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.promo-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #CF2333;
+    margin-left: 25px;
+    line-height: 1.2;
+}
+
+/* Сітка характеристик */
+.character-grid {
+    display: flex;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.char-label {
+    font-weight: bold;
+    color: #324950;
+    margin: 15px 0 10px 0 !important;
+}
+
+.text-orange {
+    color: #324950;
+    margin: 0;
+}
+
+/* Кнопка "Add to basket" */
+.btn-basket-custom {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 40px;
+    margin-top: 50px;
+    border-radius: 30px;
+    border: 3px solid #57984C;
+    color: #57984C;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.btn-basket-custom:hover {
+    background-color: #57984C;
+    color: white;
+}
+
+.basket-icon-img {
+    background: url('basket.png') no-repeat center;
+    background-size: contain;
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+}
+
+/* Корекція ліній під Characteristics */
+.green-titles hr {
+    border: 0;
+    border-top: 1px solid #57984C;
+    margin-top: 5px;
+}
+
+/* Адаптивність */
+@media (max-width: 992px) {
+    .product-flex-container {
+        flex-direction: column;
+    }
+    .product-details, .product-image-side {
+        width: 100%;
+    }
+    .main-prod-img {
+        margin: 40px auto 0;
+    }
+    .character-grid {
+        gap: 20px;
+    }
+}
+/* ===== BASKET (ТОЧНО ЯК НА МАКЕТІ) ===== */
+
+.basket-outer-container {
+    margin: 40px 0;
+}
+
+.basket-card-item {
+    display: flex;
+    align-items: center;
+    border: 2px solid #324950;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    background: #fff;
+}
+
+/* картинка */
+.basket-img {
+    width: 140px;
+    margin-right: 40px;
+}
+
+/* назва */
+.basket-title {
+    width: 220px;
+    font-size: 18px;
+    color: #324950;
+}
+
+/* опис */
+.basket-desc {
+    font-size: 18px;
+    color: #324950;
+}
+
+/* кнопка X */
+.b-remove {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 26px;
+    border: none;
+    background: none;
+    color: #EB5757;
+    cursor: pointer;
+}
